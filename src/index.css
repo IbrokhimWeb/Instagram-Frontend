@@ -6,19 +6,19 @@
   font-family: "ubuntu-bold";
   src: url("./fonts/Ubuntu/Ubuntu-Bold.ttf");
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "ubuntu-regular";
 }
-:root{
+:root {
   --royal-blue: #405de6;
   --blue: #5b51d8;
   --purple: #833ab4;
   --dark-pink: #c13584;
   --purple-red: #e1306c;
-  --red:#fd1d1d;
+  --red: #fd1d1d;
   --dark-orange: #f56040;
   --orange: #f77737;
   --yellow: #fcaf45;
@@ -26,22 +26,22 @@
   --font-lg: 48px;
   --font-md: 18px;
 }
-@media screen and (max-width:990px) {
-  :root{
+@media screen and (max-width: 990px) {
+  :root {
     --font-lg: 32px;
     --font-md: 16px;
   }
 }
-@media screen and (max-width:600px) {
-  :root{
+@media screen and (max-width: 600px) {
+  :root {
     --font-lg: 28px;
     --font-md: 14px;
   }
 }
 
-li{
+li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
 }

@@ -5,10 +5,18 @@ import Home from "./routes/home/Home";
 import Login from "./routes/login/Login";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import PrivateRoute from "./routes/private-route/PrivateRoute";
-import Admin from "./routes/admin/Admin";
+// import PrivateRoute from "./routes/privateRoute/PrivateRoute";
+// import Admin from "./routes/admin/Admin";
 import About from "./routes/about/About";
 import BackToTop from "./components/backToTop/BackToTop";
+import Inbox from "./routes/inbox/Inbox";
+import Me from "./routes/me/Me";
+import Heart from "./routes/heart/Heart"
+import Explore from './routes/exploreSearch/ExporeSearch';
+import Search from "./components/search/Search";
+import SinglePage from "./routes/singlePage/SinglePage";
+
+
 
 function App() {
   return (
@@ -19,10 +27,16 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
-          <PrivateRoute path="/admin">
+          {/* <PrivateRoute path="/admin">
             <Admin />
-          </PrivateRoute>
+          </PrivateRoute> */}
           <Route path="/about" component={About} />
+          <Route path="/direct/inbox" component={Inbox} />
+          <Route path="/me" component={Me} />
+          <Route path="/heart" component={Heart} />
+          <Route path="/explore" component={Explore} />
+          <Route path="/search" component={Search} />
+          <Route path="/p/:id" component={SinglePage} />
         </Switch>
         <Footer />
       </Router>

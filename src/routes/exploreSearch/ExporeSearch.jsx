@@ -3,7 +3,7 @@ import React from "react";
 import s from "./ExploreSearch.module.css";
 
 const ExporeSearch = () => {
-  return <div>ExporeSearch</div>;
+  return <div>Expore</div>;
 };
 
 export default ExporeSearch;

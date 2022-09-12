@@ -1,11 +1,14 @@
 // @ts-nocheck
-import React from 'react';
-import s from "./PrivateRoute.module.css";
+import React from 'react'
+import { Route, Redirect } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-const PrivateRoute = () => {
-  return (
-    <div>PrivateRoute</div>
-  )
+function PrivateRoute(props) {
+  const auth = useSelector(s => s.auth)
+  return auth ? 
+    <Route {...props}/>
+    :
+    <Redirect to="/login"/>
 }
 
 export default PrivateRoute
