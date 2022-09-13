@@ -4,7 +4,7 @@ import s from "./Heart.module.css";
 
 const Heart = () => {
   return (
-    <div>Heart</div>
+    <div>Heart</div> 
   )
 }
 
