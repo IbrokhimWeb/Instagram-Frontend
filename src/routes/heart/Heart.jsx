@@ -8,4 +8,4 @@ const Heart = () => {
   )
 }
 
-export default Heart
+export default Heart;
