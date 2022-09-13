@@ -10,7 +10,7 @@ import { HiHome } from "react-icons/hi";
 
 
 function mainNavbar(props) {
-    return (
+    return ( 
         <div className={s.navbar__item}>
                     <ul>
                         <li>
