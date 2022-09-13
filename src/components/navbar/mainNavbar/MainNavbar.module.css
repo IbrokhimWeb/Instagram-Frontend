@@ -1,0 +1,24 @@
+.navbar__item > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.7rem;
+    color: black;
+}
+
+/* .link{
+    
+} */
+
+.icons{
+    color: black;
+}
+
+.avatar{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+}
