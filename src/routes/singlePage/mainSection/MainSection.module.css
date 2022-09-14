@@ -1,0 +1,38 @@
+
+.mainSection{
+    height: 75px;
+    padding: 0 25px;
+    border-bottom: 0.5px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.admin{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.username{
+    font-weight: 200;
+}
+
+.username > span{
+    color: blue;
+    cursor: pointer;
+}
+
+.more{
+    font-size: 30px;
+    cursor: pointer;
+}

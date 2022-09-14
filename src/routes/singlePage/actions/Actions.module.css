@@ -1,0 +1,39 @@
+
+.actions{
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftIcons{
+    display: flex;
+    gap: 20px;
+}
+
+.postLike, 
+.postCommit, 
+.postForward, 
+.postSave{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.postLike{
+    font-size: 2.3rem;
+}
+
+.actionsResult{
+    gap: 20px;
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.actionsResult > li{
+    gap: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
