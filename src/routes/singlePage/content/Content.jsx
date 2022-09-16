@@ -3,7 +3,7 @@ import s from "./Content.module.css"
 
 //Imposr Images
 import test from "../../../assets/test.mp4";
-import avatar from "../../../assets/test.jpg";
+// import avatar from "../../../assets/test.jpg";
 
 
 function Content(props) {

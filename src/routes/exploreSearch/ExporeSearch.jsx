@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 import { recommendedPosts } from "../../static/static";
-import s from "./ExploreSearch.module.scss";
+import s from "./ExploreSearch.module.css";
 
 import {BsPlayFill} from 'react-icons/bs'
 import {FcLike} from 'react-icons/fc'

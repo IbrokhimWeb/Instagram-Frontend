@@ -11,13 +11,10 @@ import HeartBox from './heartBox/heartBox';
 const Heart = () => {
 
   return (
-<<<<<<< HEAD
     <div className={s.hearts}>
       {heartedPosts.map((items, index) => <HeartBox key={index} {...items} />)}
     </div>
-=======
-    <div>Heart</div> 
->>>>>>> feruz
+
   )
 }
 
