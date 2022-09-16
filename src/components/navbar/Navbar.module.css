@@ -1,20 +1,64 @@
-.container{
-    display: flex;
-    justify-content: center;
+.container {
+    width: 70%;
+    margin: 0 auto;
 }
 
-.navbar{
+.navbar {
     height: 60px;
-    padding: 0 200px;
     display: flex;
-    gap: 100px;
+    gap: 200px;
+    justify-content: center;
     align-items: center;
     border-bottom: 0.5px solid rgb(189, 189, 189);
 }
 
-.textLogo{
+.textLogo {
     width: 110px;
     padding-top: 10px;
-    margin-right: 100px;
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.hamburger {
+    font-size: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1070px) {
+
+    .navbar,
+    .actions {
+        gap: 150px;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .navbar,
+    .actions {
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        justify-content: space-around;
+        gap: 50%;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

@@ -8,7 +8,10 @@ import instagramTextLogo from "../../assets/instagram1.png";
 
 // Import Components
 import Search from "../search/Search";
-import MainNavbar from "./mainNavbar/MainNavbar"
+import MainNavbar from "./mainNavbar/MainNavbar";
+
+// Import Icons 
+import { FiSearch } from "react-icons/fi"
 
 
 const Navbar = () => {
@@ -18,8 +21,12 @@ const Navbar = () => {
                 <Link to="/">
                     <img className={s.textLogo} src={instagramTextLogo} alt="" />
                 </Link>
-                <Search />
-                <MainNavbar />
+                <div className={s.actions}>
+                    <Search />
+                    <MainNavbar />
+                </div>
+                <FiSearch className={s.hamburger} />
+
             </nav>
         </section>
     </>;
