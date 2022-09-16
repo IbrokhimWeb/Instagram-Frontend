@@ -1,35 +1,25 @@
-// @ts-nocheck
+// @ts-nocheck   
 import React from "react";
 import { recommendedPosts } from "../../static/static";
 import s from "./ExploreSearch.module.css";
 
-import {BsPlayFill} from 'react-icons/bs'
-import {FcLike} from 'react-icons/fc'
+import { BsPlayFill } from 'react-icons/bs';
+import { FcLike } from 'react-icons/fc';
 
 const ExporeSearch = () => {
-  return <div className={s.container}>
-    {recommendedPosts.map((index, data) => {
-        if(recommendedPosts[data].type == 'foto'){
-          return <div key={index} onMouseEnter={()=>{}} className={s.item}>
-            <img className="" src={recommendedPosts[data].url.foto} alt="" />
-            <div className={s.hover}>
-              <FcLike className={s.like}/>
-              100k
-            </div>
-        </div>
-        }
-        else{
-          return <div key={index} className={s.item}>
-            <BsPlayFill className={s.icon}/>
-            <video className="" src={recommendedPosts[data].url.video}/>
-            <div className={s.hover}>
-              <FcLike className={s.like}/>
-              100k
-            </div>
-          </div>
-        }
-      })}
-  </div>;
+    return <div className={s.container}>
+        {recommendedPosts.length > 0 ? recommendedPosts.map((e, i) =>
+            <div key={i} onMouseEnter={() => { }} className={s.item}>
+                {e.type === 'foto'
+                    ? <img className="" src={e.url.foto} alt="" />
+                    : e.type === 'video'
+                        ? <><BsPlayFill className={s.icon} />
+                            <video className="" src={e.url.video} /></>
+                        : ''}
+                <div className={s.hover}>
+                    <FcLike className={s.like} /> 100k
+                </div>
+            </div>) : <h1>Postlar Yo'q</h1>}
+    </div>;
 };
-
 export default ExporeSearch;
