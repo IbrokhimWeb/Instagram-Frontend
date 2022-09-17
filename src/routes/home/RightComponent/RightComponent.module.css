@@ -1,0 +1,35 @@
+.RightComponents {
+    width: 40%;
+    height: 100%;
+    padding: .4rem 1rem;
+}
+
+.rightCompRecomends {
+    width: 100%;
+    margin-top: 1.3rem;
+}
+
+.rightCompText {
+    padding-bottom: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightCompText > h2 {
+    font-size: .9rem;
+    color: rgb(142, 142, 142);
+    font-weight: 600;
+}
+
+.rightCompRecomends .rightCompBoxes {
+    height: 21rem;
+    overflow-y: auto;
+}
+
+/* Media */
+@media(max-width: 830px){
+    .RightComponents {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+:root {
+    --rigth-usertext-h2: .9rem;
+    --rigth-usertext-a: .8rem;
+}
+.rightUsers {
+    height: 3.8rem;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin: .4rem 0;
+}
+.rightUsersInner {
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+}
+.rightUsers .rightUsersInner img {
+    height: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: .8rem;
+}
+.rightUsers .rightUsersInner .userText h2 {
+    font-size: var(--rigth-usertext-h2);
+    cursor: pointer;
+    color: #4c4c4c;
+    font-weight: 600;
+    margin-bottom: .3rem;
+}
+.rightUsers .rightUsersInner .userText p {
+    font-size: var(--rigth-usertext-h2);
+    font-weight: 500;
+    color: #999;
+}
+.rightUsers > a {
+    font-size: var(--rigth-usertext-a);
+    font-weight: 600;
+    margin-left: .8rem;
+    color: rgb(0, 149, 246)
+}
