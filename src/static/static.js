@@ -6,7 +6,7 @@ import heart2 from '../assets/heart-2.jpg';
 import heart3 from '../assets/heart-3.jpg';
 import heart4 from '../assets/heart-4.jpg';
 import foto from '../assets/foto1.jpg'
-import video from '../assets/video.mp4'
+import video from '../assets/video5.mp4'
 
 
 export const posts = [
