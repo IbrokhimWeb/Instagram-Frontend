@@ -38,11 +38,6 @@ function mainNavbar(props) {
                                 <AiOutlineHeart className={s.icons} />
                             </Link>
                         </li>
-                        <li>
-                            <Link className={s.link} to="/">
-                                <span className={s.avatar}></span>
-                            </Link>
-                        </li>
                     </ul>
                 </div>
     );

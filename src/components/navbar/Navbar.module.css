@@ -6,7 +6,7 @@
 .navbar {
     height: 60px;
     display: flex;
-    gap: 200px;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
     border-bottom: 0.5px solid rgb(189, 189, 189);
@@ -18,47 +18,74 @@
 }
 
 .actions {
+    margin-left: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 200px;
+    gap: 5rem;
 }
 
-.hamburger {
-    font-size: 40px;
+.search{
     display: none;
-    cursor: pointer;
 }
 
-@media screen and (max-width: 1070px) {
+.avatar{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+}
 
-    .navbar,
+
+
+@media screen and (max-width: 1100px) {
+
     .actions {
-        gap: 150px;
+        margin-left: 3rem;
     }
-
-
 }
 
 @media screen and (max-width: 1000px) {
 
     .navbar,
     .actions {
-        gap: 100px;
+        gap: 5rem;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 900px) {
     .navbar {
-        justify-content: space-around;
-        gap: 50%;
+        justify-content: center;
+        gap: 90%;
     }
 
     .actions {
         display: none;
     }
 
-    .hamburger {
+    .search {
         display: block;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    .actionsItem{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 2rem
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        justify-content: center;
+        gap: 11rem;
+    }
+
+    .actionsItem{
+        gap: 1rem
     }
 }

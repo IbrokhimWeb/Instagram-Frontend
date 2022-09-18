@@ -10,16 +10,21 @@ import Coments from "./coments/Coments";
 import Content from "./content/Content";
 
 const SinglePage = () => {
-    
+
     return <>
         <section className={s.container}>
             <div className={s.block}>
-                <Content/>
+                <div className={s.content}>
+                    <Content />
+                </div>
                 <div className={s.title}>
-                    <MainSection/>
-                    <Coments/>
-                    <Actions/>
-                    <InputShare/>
+                    <MainSection />
+                    <div className={s.mediaContent}>
+                        <Content />
+                    </div>
+                    <Coments />
+                    <Actions />
+                    <InputShare />
                 </div>
             </div>
         </section>

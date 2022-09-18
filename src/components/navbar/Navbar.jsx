@@ -25,8 +25,12 @@ const Navbar = () => {
                     <Search />
                     <MainNavbar />
                 </div>
-                <FiSearch className={s.hamburger} />
-
+                <div className={s.actionsItem}>
+                <FiSearch className={s.search}/>
+                <Link className={s.link} to="/">
+                    <span className={s.avatar}></span>
+                </Link>
+                </div>
             </nav>
         </section>
     </>;

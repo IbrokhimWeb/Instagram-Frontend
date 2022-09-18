@@ -13,10 +13,18 @@ function MainSection(props) {
         <>
             <div className={s.mainSection}>
                 <div className={s.admin}>
-                    <img className={s.avatar} src={avatar} alt="" />
-                    <h4 className={s.username}>ibrokhimweb <span> • Подписаться</span>  </h4>
+                    <img
+                        onClick={()=> console.log("Profil")}
+                        className={s.avatar}
+                        src={avatar} 
+                    />
+                    <h4 className={s.username}>ibrokhimweb <span onClick={()=> console.log("Подписаться")} > • Подписаться</span>  
+                    </h4>
                 </div>
-                <IoIosMore className={s.more} />
+                <IoIosMore
+                    onClick={() => console.log("More tugmasi bosildi")}
+                    className={s.more} 
+                />
             </div>
         </>
     );

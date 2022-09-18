@@ -1,4 +1,195 @@
-/* salom */
+.container {
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.item>img,
+.item>video {
+    width: 30rem;
+
+}
+
+@media screen and (max-width:550px) {
+
+    .item>img,
+    .item>video {
+        width: 25rem;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .item>img,
+    .item>video {
+        width: 20rem;
+
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    .item>img,
+    .item>video {
+        width: 17rem;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .container{
     width: 75%;
     margin: 2rem auto;
@@ -7,9 +198,9 @@
     gap: 2rem;
     text-align: center;
     position: relative;
-}
+} */
 
-.hover{
+/* .hover{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -21,33 +212,33 @@
     justify-content: center;
     color: var(--white);
     display: none;
-}
+} */
 
-.like{
+/* .like{
     color: var(--white);
     font-size: 18px;
-}
+} */
 
-.container > img{
+/* .container > img{
     display: block;
     width: 100%;
     object-fit: cover;
-}
+} */
 
-.container > video{
+/* .container > video{
     display: block;
     width: 100%;
     object-fit: cover;
-}
+} */
 
 
-.item{
+/* .item{
     width: 100%;
     height: 15rem;
     overflow: hidden;
     position: relative;
     border-radius: 1rem;
-}
+} */
 /* 
   .item:hover{
     .hover{
@@ -55,30 +246,28 @@
     }
 } */
 
-.icon{
+/* .icon{
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
     color: var(--white);
     font-size: 30px;
-}
+} */
 
-.icon:hover{
+/* .icon:hover{
     cursor: pointer;
     color: rgba(255, 255, 255, 0.37);
-}
+} */
 
 
-@media screen and (max-width:800px) {
+/* @media screen and (max-width:800px) {
     .container{
-        /* width: 85%; */
         grid-template-columns: 1fr 1fr;
     }
-}
-
+} */
+/* 
 @media screen and (max-width:500px) {
     .container{
-        /* width: 85%; */
         grid-template-columns: 1fr;
     }
-}
+} */

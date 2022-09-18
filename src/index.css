@@ -66,6 +66,12 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  *{
+      display: none;
+  }
+}
+
 li {
   list-style: none;
 }
