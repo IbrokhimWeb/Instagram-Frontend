@@ -5,7 +5,7 @@ import s from "./Coments.module.css";
 import coments from "../../../assets/coments.png";
 
 // Import Icons
-import { BsHeartFill } from "react-icons/bs";
+import { BsHeartFill, BsReply } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 // Import Data
 import { comments } from "../../../static/static"
@@ -36,6 +36,7 @@ function Coments(props) {
                       </div>
                       <div className={s.data}>
                         <p>{e.data}</p>
+                        <div className={s.reply}>Reply<BsReply /></div>
                         {
                           true
                             ?

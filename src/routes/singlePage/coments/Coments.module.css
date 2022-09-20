@@ -84,6 +84,14 @@
     align-items: center;
 }
 
+.reply{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 950px) {
     .coments{
