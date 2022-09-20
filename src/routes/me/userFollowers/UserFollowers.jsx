@@ -1,19 +1,22 @@
-import React from "react";
+import { React } from "react";
 import s from "./UserFollowers.module.css";
-const UserFollowers = (userProfile) => {
+const UserFollowers = ({ userProfile }) => {
+  let userState = [userProfile[1]];
   return (
     <>
       <div className={s.followers}>
-        {/* {userProfile.map((e, i) => {
+        {userState.map((element, inx) => {
           return (
-            <div key={i}>
-              <h1>{e.followers}</h1>
+            <div key={inx}>
+              <h1>{element.username}</h1>
+              <h1>{element.bio}</h1>
+              <img src={element.avatar} alt={element.username} />
             </div>
           );
-        })} */}
-
-        <h1>followers</h1>
-        <h1>following</h1>
+        })}
+        <span>2 posts </span>
+        <span> 13123 followers </span>
+        <span> 13123 following</span>
       </div>
     </>
   );

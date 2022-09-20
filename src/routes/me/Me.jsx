@@ -1,18 +1,18 @@
 // @ts-nocheck
-import React from "react";
+import { React } from "react";
 import s from "./Me.module.css";
 import { userProfile } from "../../static/static";
 import UserFollowers from "./userFollowers/UserFollowers";
 const Me = () => {
-  const dataFollowers = userProfile;
-  console.log(dataFollowers);
+  const userInfos = [userProfile[0]];
+
   return (
     <>
       <div className={s.container}>
-        <div className={s.userProfile}>
-          {userProfile.map((user, id) => {
+        <div>
+          {userInfos.map((user, id) => {
             return (
-              <div key={id}>
+              <div className={s.userProfile} key={id}>
                 <img
                   className={s.userAvatar}
                   src={user.avatar}

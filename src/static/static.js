@@ -2,7 +2,7 @@
 // import static image
 import userAvatar from "../assets/userAvatar.png";
 import userPost from "../assets/carPhoto.jpg";
-import userPost2 from "../assets/carPhoto2.jpg";
+// import userPost2 from "../assets/carPhoto2.jpg";
 
 export const posts = [{}];
 
@@ -16,7 +16,12 @@ export const userProfile = [
     lastName: "Kotibkhonov",
     bio: "Work Hard Dream Big",
     desc: "Student in Chonnam National University",
-    followers: [
+
+    postLikes: [],
+    savedPosts: [],
+  },
+  {
+    followers =[
       {
         username: "qwrty555",
         avatar: userAvatar,
@@ -50,11 +55,22 @@ export const userProfile = [
         bio: "in this morning ...",
       },
     ],
-    posts: [{ img: userPost, title: "dream car", date: new Date(), id:Math.random() }],
-    postLikes: [],
-    savedPosts: [],
+    posts: [
+      {
+        img: userPost,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+    ],
   },
 ];
+const xx = [userProfile[1].followers[0]];
+console.log(xx)
+xx.map((el) => {
+   console.log(el.username);
+});
+// console.log(data);
 export const heartedPosts = [
   { img: "link", title: "nomi" },
   { img: "link", title: "nomi" },
