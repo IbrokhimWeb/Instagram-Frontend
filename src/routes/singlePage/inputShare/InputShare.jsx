@@ -5,10 +5,10 @@ import s from "./InputShare.module.css"
 import { MdSend } from "react-icons/md";
 import { BsEmojiSmile } from "react-icons/bs";
 
-
 function InputShare(props) {
 
     const [comment, setComment] = useState('');
+
 
     return (
         <>
@@ -26,8 +26,7 @@ function InputShare(props) {
                 <MdSend
                     onClick={() => {
                         comment?.length > 0
-                            ? console.log(comment.trim())
-                            : console.log("Siz Habar Yozmadingiz !!!")
+                            ? console.log(comment.trim()) : console.log("Siz Habar Yozmadingiz !!!")
                     }}
                     className={s.share} />
             </div>

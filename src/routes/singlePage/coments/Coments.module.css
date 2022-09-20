@@ -1,18 +1,87 @@
-.coments{
-    width: 555px;
-    height: 30rem;
-    padding: 20px;
+.pustoy{
+    width: 100%;
+    height: 100%;
     border-bottom: 0.5px solid rgb(0 0 0 / 20%);
-    overflow-y: scroll;
+    overflow-x: hidden; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.coments{
+    width: 555px;
+    height: 30rem;
+    padding: 15px 30px;
+    border-bottom: 0.5px solid rgb(0 0 0 / 20%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
 }
 
 .img{
     width: 100px;
+}
+
+.comment{
+    gap: 5px;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 7px;
+    flex-direction: column;
+    box-sizing: content-box;
+    border-radius: 0 15px 15px;
+    border: 0.5px solid rgb(0 0 0 / 20%);
+    box-shadow: 0 6px 5px rgb(0 0 0 / 20%);
+}
+
+.comentItems{
+    display: flex; 
+    width: inherit;
+}
+
+
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comentItem{
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.data{
+    gap: 15px;
+    display: flex;
+    margin-bottom: -7px;
+    align-items: center;
+    justify-content: end;
+    color: rgba(0, 0, 0, 0.564);
+    font-size: 0.9rem;
+}
+
+.likeRed{
+    fill: crimson;
+    cursor: pointer;
+}
+
+.postLike{
+    cursor: pointer;
+}
+
+.commentLike{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
