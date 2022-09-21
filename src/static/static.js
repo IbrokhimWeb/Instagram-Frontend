@@ -21,7 +21,7 @@ export const userProfile = [
     savedPosts: [],
   },
   {
-    followers =[
+    followers: [
       {
         username: "qwrty555",
         avatar: userAvatar,
@@ -65,12 +65,7 @@ export const userProfile = [
     ],
   },
 ];
-const xx = [userProfile[1].followers[0]];
-console.log(xx)
-xx.map((el) => {
-   console.log(el.username);
-});
-// console.log(data);
+
 export const heartedPosts = [
   { img: "link", title: "nomi" },
   { img: "link", title: "nomi" },
