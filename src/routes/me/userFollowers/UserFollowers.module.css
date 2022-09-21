@@ -1,0 +1,13 @@
+.userFollowers {
+  margin-bottom: 30px;
+}
+.userFollowersItem {
+  font-size: 18px;
+  font-weight: 400;
+}
+.userFollowersItem span {
+  font-weight: 900;
+}
+.userFollowersItem:not(:first-child) {
+  margin-left: 40px;
+}

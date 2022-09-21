@@ -1,22 +1,20 @@
 import { React } from "react";
 import s from "./UserFollowers.module.css";
-const UserFollowers = ({ userProfile }) => {
-  let userState = [userProfile[1]];
+const UserFollowers = () => {
   return (
     <>
-      <div className={s.followers}>
-        {userState.map((element, inx) => {
-          return (
-            <div key={inx}>
-              <h1>{element.username}</h1>
-              <h1>{element.bio}</h1>
-              <img src={element.avatar} alt={element.username} />
-            </div>
-          );
-        })}
-        <span>2 posts </span>
-        <span> 13123 followers </span>
-        <span> 13123 following</span>
+      <div className={s.userFollowers}>
+        <span className={s.userFollowersItem}>
+          <span>1</span> posts
+        </span>
+        <span className={s.userFollowersItem}>
+          <span>10K</span>  followers
+        </span>
+        <span className={s.userFollowersItem}>
+          <span>1,200  </span>  following
+        </span>
+        {/* <span className={s.userFollowersItem}>2 posts </span>
+        <span className={s.userFollowersItem}>2 posts </span> */}
       </div>
     </>
   );

@@ -2,7 +2,7 @@
 // import static image
 import userAvatar from "../assets/userAvatar.png";
 import userPost from "../assets/carPhoto.jpg";
-// import userPost2 from "../assets/carPhoto2.jpg";
+import userPost2 from "../assets/carPhoto2.jpg";
 
 export const posts = [{}];
 
@@ -12,11 +12,21 @@ export const userProfile = [
     avatar: userAvatar,
     username: "m_yakuboff",
     password: "12345678",
-    firstName: "Zokirkhon",
-    lastName: "Kotibkhonov",
-    bio: "Work Hard Dream Big",
+    firstName: "Mustafo",
+    lastName: "Yakubov",
+    bio: "Your dreams are waiting for you ...",
     desc: "Student in Chonnam National University",
-
+    userLink: "https://mustafo-yakuboff.netlify.app/",
+    highLights: [
+      {
+        img: userPost2,
+        desc: "Amg ",
+      },
+      {
+        img: userPost,
+        desc: "Cls ",
+      },
+    ],
     postLikes: [],
     savedPosts: [],
   },
@@ -65,6 +75,10 @@ export const userProfile = [
     ],
   },
 ];
+// const mapto = userProfile[1].followers;
+// mapto.map((el, i) => {
+//   console.log(el.username, el.bio, i);
+// });
 
 export const heartedPosts = [
   { img: "link", title: "nomi" },
