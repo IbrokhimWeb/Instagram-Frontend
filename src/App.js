@@ -15,6 +15,8 @@ import Heart from "./routes/heart/Heart"
 import Explore from './routes/exploreSearch/ExporeSearch';
 import Search from "./components/search/Search";
 import SinglePage from "./routes/singlePage/SinglePage";
+import Zaregistrirovatcya from "./routes/zaregistrirovatcya/Zaregistrirovatcya";
+
 
 
 
@@ -27,6 +29,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
+          <Route path="/rrr" component={Zaregistrirovatcya} />
+
           {/* <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute> */}
