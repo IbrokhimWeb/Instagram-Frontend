@@ -72,13 +72,39 @@ export const userProfile = [
         date: new Date(),
         id: Math.random(),
       },
+      {
+        img: userPost,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+      {
+        img: userPost2,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+      {
+        img: userPost,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+      {
+        img: userPost2,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+      {
+        img: userPost,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
     ],
   },
 ];
-// const mapto = userProfile[1].followers;
-// mapto.map((el, i) => {
-//   console.log(el.username, el.bio, i);
-// });
 
 export const heartedPosts = [
   { img: "link", title: "nomi" },

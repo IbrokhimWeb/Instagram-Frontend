@@ -4,10 +4,12 @@ import { React } from "react";
 import s from "./Me.module.css";
 import { userProfile } from "../../static/static";
 import UserFollowers from "./userFollowers/UserFollowers";
+import Posting from "./posting/Posting";
 const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
-  console.log(userHighLights);
+  const userPosts = userProfile[1].posts;
+  // const userFollowers = userProfile[1];
   return (
     <>
       <div className={s.container}>
@@ -58,8 +60,8 @@ const Me = () => {
                           ></path>
                         </svg>
                       </div>
-                      {/* COMPONENT THAT SHOWS USER`S FOLLOWER FOLLOWING AND POSTS */}
-                      <UserFollowers userProfile={userProfile} />
+                      {/* COMPONENT THAT SHOWS USER`S FOLLOWERS FOLLOWING AND POSTS */}
+                      <UserFollowers userFollowers={userProfile} />
                       <span className={s.profileName}>
                         {user.firstName} {user.lastName}
                       </span>
@@ -91,14 +93,13 @@ const Me = () => {
                   </span>
                 );
               })}
-
               {/* Adding new highlight button */}
               <div className={s.btnItem}>
                 <p className={s.addStoryBtn}>
                   <span>
                     <svg
                       aria-label="Plus icon"
-                      class="_ab6-"
+                      className="_ab6-"
                       color="#c7c7c7"
                       fill="#c7c7c7"
                       height="44"
@@ -112,6 +113,8 @@ const Me = () => {
                 </p>
                 <p className={s.newTxt}> New</p>
               </div>
+              {/* SECTION POSTING ADN ITEMS  */}
+              <Posting userPosts={userPosts} />
             </div>
           );
         })}
