@@ -3,7 +3,7 @@
 import userAvatar from "../assets/userAvatar.png";
 import userPost from "../assets/carPhoto.jpg";
 import userPost2 from "../assets/carPhoto2.jpg";
-
+import following from "../assets/following.jpg";
 export const posts = [{}];
 
 export const userProfile = [
@@ -34,17 +34,17 @@ export const userProfile = [
     followers: [
       {
         username: "qwrty555",
-        avatar: userAvatar,
+        avatar: following,
         bio: "never give up",
-      },
+      },  
       {
         username: "m_yakuboff",
-        avatar: userAvatar,
+        avatar: following,
         bio: "keep doing it and don`t give up",
       },
       {
         username: "klyuldasheva",
-        avatar: userAvatar,
+        avatar: following,
         bio: "in this morning ...",
       },
     ],
@@ -105,7 +105,7 @@ export const userProfile = [
     ],
   },
 ];
-
+// console.log(userProfile[1].followers.avatar);
 export const heartedPosts = [
   { img: "link", title: "nomi" },
   { img: "link", title: "nomi" },

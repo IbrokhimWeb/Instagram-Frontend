@@ -1,7 +1,10 @@
 .userFollowers {
   margin-bottom: 30px;
+  overflow: hidden;
+  /* position: relative; */
 }
 .userFollowersItem {
+  cursor: pointer;
   font-size: 18px;
   font-weight: 400;
 }
@@ -10,4 +13,37 @@
 }
 .userFollowersItem:not(:first-child) {
   margin-left: 40px;
+}
+.modalDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 243px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  background-color: var(--white);
+  z-index: 555;
+}
+.followList {
+  overflow-y: scroll;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.list {
+  /* display: grid;
+  row-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(20%, 80%); */
+  display: flex;
 }

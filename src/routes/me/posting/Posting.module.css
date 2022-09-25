@@ -24,7 +24,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(293px, 293px);
-
   gap: 28px !important;
 }
 .postImg {
@@ -32,6 +31,7 @@
   height: 100%;
   object-fit: cover;
   object-position: bottom;
+  border-radius: 2px;
 }
 .partImgsOfPosts {
   overflow: hidden;
