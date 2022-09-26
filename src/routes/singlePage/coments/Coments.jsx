@@ -30,7 +30,9 @@ function Coments(props) {
                               : e.comment
                                 .split('')
                                 .map((e, i) => i <= 190 ? e : '')
-                                .join('') + ' ...'
+                                .join('') + ' ...' 
+
+                                
                           }
                         </div>
                       </div>

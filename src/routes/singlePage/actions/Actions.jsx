@@ -22,16 +22,16 @@ function Actions(props) {
                         like
                             ? <BsHeartFill
                                 className={s.likeRed}
-                                onClick={e => {return setLike(like => like = !like), console.log("DisLike")}}
+                                onClick={e => { return setLike(like => like = !like), console.log("DisLike") }}
                             />
                             : <AiOutlineHeart
                                 className={s.postLike}
-                                onClick={e => {return setLike(like => like = !like), console.log("Like")}}
+                                onClick={e => { return setLike(like => like = !like), console.log("Like") }}
                             />
                     }
 
-                    <AiOutlineComment onClick={()=>{console.log( "chat bo'limi click bo'ldi" );}} className={s.postCommit} />
-                    <RiShareForwardLine onClick={()=>{console.log("Forward bo'limi click bo'ldi");}} className={s.postForward} />
+                    <AiOutlineComment onClick={() => { console.log("chat bo'limi click bo'ldi"); }} className={s.postCommit} />
+                    <RiShareForwardLine onClick={() => { console.log("Forward bo'limi click bo'ldi"); }} className={s.postForward} />
 
                 </div>
 
@@ -39,11 +39,11 @@ function Actions(props) {
                     save
                         ? <BiBookmark
                             className={s.postSave}
-                            onClick={e => {return setSave(save => save = !save), console.log("Habar saqlandi")}}
+                            onClick={e => { return setSave(save => save = !save), console.log("Habar saqlandi") }}
                         />
                         : <BsFillBookmarkDashFill
                             className={s.savedActive}
-                            onClick={e => {return setSave(save => save = !save), console.log("Saqlangan Xabar olib tashlandi !!!")}}
+                            onClick={e => { return setSave(save => save = !save), console.log("Saqlangan Xabar olib tashlandi !!!") }}
                         />
                 }
 
