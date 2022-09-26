@@ -4,13 +4,13 @@
 }
 .rightUsers {
     height: 3.8rem;
+    width: 100%;
     display: flex; 
     align-items: center;
-    justify-content: space-between;
-    margin: .4rem 0;
+    justify-content: space-between; 
+    margin: .4rem .2rem;
 }
 .rightUsersInner {
-    width: 100%;
     height: 100%;
     display: flex; 
     align-items: center;
@@ -37,6 +37,6 @@
 .rightUsers > a {
     font-size: var(--rigth-usertext-a);
     font-weight: 600;
-    margin-left: .8rem;
+    margin: 0 .9rem;
     color: rgb(0, 149, 246)
 }
