@@ -1,0 +1,41 @@
+.PostActions {
+    position: fixed;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 25rem;
+    border-radius: .8rem;
+    opacity: 0;
+    transition: .4s ease;
+    visibility: hidden;
+}
+
+.PostActions.actives {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.PostActions > a {
+    width: 100%;
+    font-size: .9rem;
+    color: #2c2c2c;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.PostActions > a:not(:last-child){
+    border-bottom: solid 1px #ccc;
+}
+
+.PostActions > a:nth-child(1), 
+.PostActions > a:nth-child(2) {
+    font-weight: 700;
+    color: crimson;
+}

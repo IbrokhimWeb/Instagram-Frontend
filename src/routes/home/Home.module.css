@@ -1,0 +1,28 @@
+.HomeSection {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Media Cuery */
+@media(max-width: 1024px){
+    .HomeSection {
+        padding: 1rem 0;
+    }
+}
+
+@media(max-width: 830px){
+    .HomeSection {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 500px){
+    .HomeSection {
+        padding: 1rem 0;
+    }
+}
