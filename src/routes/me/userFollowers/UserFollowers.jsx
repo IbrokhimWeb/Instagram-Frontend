@@ -8,6 +8,14 @@ const UserFollowers = ({ userFollowers }) => {
   //MODAL FUNCTION
   const [isModalVisible, setIsModalVisible] = useState(false);
 
+  const showModal = () => {
+    setIsModalVisible(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setIsModalVisible(false);
+    document.body.style.overflow = "unset";
+  };
   return (
     <>
       <div className={s.userFollowers}>
@@ -19,10 +27,7 @@ const UserFollowers = ({ userFollowers }) => {
                 <span>{data.posts.length}</span> posts
               </span>
               {/* MAP FOR FOLLOWERS */}
-              <span
-                onClick={() => setIsModalVisible(true)}
-                className={s.userFollowersItem}
-              >
+              <span onClick={showModal} className={s.userFollowersItem}>
                 <span>{data.followers.length}</span> followers
               </span>
               {isModalVisible && (
@@ -50,10 +55,8 @@ const UserFollowers = ({ userFollowers }) => {
                       })}
                     </div>
                   </div>
-                  <div
-                    onClick={() => setIsModalVisible(false)}
-                    className={s.overlay}
-                  ></div>
+                  <div onClick={closeModal} className={s.overlay}></div>
+                  {/* to blur background and close modal when touch anywhere */}
                 </>
               )}
               {/* MAP FOR FOLLOWING */}
