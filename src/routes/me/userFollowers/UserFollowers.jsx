@@ -15,6 +15,7 @@ const UserFollowers = ({ userFollowers }) => {
   const closeModal = () => {
     setIsModalVisible(false);
     document.body.style.overflow = "unset";
+    document.body.style.paddingRight = "35px";
   };
   return (
     <>
