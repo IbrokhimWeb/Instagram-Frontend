@@ -1,5 +1,6 @@
 // @ts-nocheck
 
+
 // import Foto 
 import heart1 from '../assets/heart-1.jpg';
 import heart2 from '../assets/heart-2.jpg';
@@ -7,6 +8,9 @@ import heart3 from '../assets/heart-3.jpg';
 import heart4 from '../assets/heart-4.jpg';
 import foto from '../assets/foto1.jpg'
 import video from '../assets/video5.mp4'
+import userAvatar from "../assets/userAvatar.png";
+import userPost from "../assets/carPhoto.jpg";
+// import userPost2 from "../assets/carPhoto2.jpg";
 
 
 
@@ -14,21 +18,94 @@ export const posts = [
   {}
 ];
 
-export const users = [
-  {}
-];
 
+export const posts = [{}];
+
+export const userProfile = [
+  {
+    id: "1234asfdgf",
+    avatar: userAvatar,
+    username: "m_yakuboff",
+    password: "12345678",
+    firstName: "Zokirkhon",
+    lastName: "Kotibkhonov",
+    bio: "Work Hard Dream Big",
+    desc: "Student in Chonnam National University",
+
+    postLikes: [],
+    savedPosts: [],
+  },
+  {
+    followers =[
+      {
+        username: "qwrty555",
+        avatar: userAvatar,
+        bio: "never give up",
+      },
+      {
+        username: "m_yakuboff",
+        avatar: userAvatar,
+        bio: "keep doing it and don`t give up",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
+      },
+    ],
+    following: [
+      {
+        username: "qwrty555",
+        avatar: userAvatar,
+        bio: "never give up",
+      },
+      {
+        username: "m_yakuboff",
+        avatar: userAvatar,
+        bio: "keep doing it and don`t give up",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
+      },
+    ],
+    posts: [
+      {
+        img: userPost,
+        title: "dream car",
+        date: new Date(),
+        id: Math.random(),
+      },
+    ],
+  },
+];
+const xx = [userProfile[1].followers[0]];
+console.log(xx)
+xx.map((el) => {
+   console.log(el.username);
+});
+// console.log(data);
 export const heartedPosts = [
+<<<<<<< HEAD
   { id: 0, img: heart2, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 1, img: heart1, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 2, img: heart3, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 3, img: heart4, author: 'userName', title1: 'title1', title2: 'title2' }
 ]
 
+=======
+  { img: "link", title: "nomi" },
+  { img: "link", title: "nomi" },
+  { img: "link", title: "nomi" },
+  { img: "link", title: "nomi" },
+];
+>>>>>>> mustafo
 
 export const recommendedPosts = [
   {
     id: 1,
+<<<<<<< HEAD
     type: 'foto',
     url: { foto }
   },
@@ -66,6 +143,15 @@ export const recommendedPosts = [
     id: 8,
     type: 'video',
     url: { video }
+=======
+    type: "video",
+    url: "link",
+  },
+  {
+    id: 2,
+    type: "image",
+    url: "link",
+>>>>>>> mustafo
   },
 ];
 
