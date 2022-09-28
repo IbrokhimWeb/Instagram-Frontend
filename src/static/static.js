@@ -87,25 +87,17 @@ xx.map((el) => {
 });
 // console.log(data);
 export const heartedPosts = [
-<<<<<<< HEAD
   { id: 0, img: heart2, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 1, img: heart1, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 2, img: heart3, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 3, img: heart4, author: 'userName', title1: 'title1', title2: 'title2' }
 ]
 
-=======
-  { img: "link", title: "nomi" },
-  { img: "link", title: "nomi" },
-  { img: "link", title: "nomi" },
-  { img: "link", title: "nomi" },
-];
->>>>>>> mustafo
+
 
 export const recommendedPosts = [
   {
     id: 1,
-<<<<<<< HEAD
     type: 'foto',
     url: { foto }
   },
@@ -142,8 +134,7 @@ export const recommendedPosts = [
   {
     id: 8,
     type: 'video',
-    url: { video }
-=======
+    url: { video },
     type: "video",
     url: "link",
   },
@@ -151,7 +142,7 @@ export const recommendedPosts = [
     id: 2,
     type: "image",
     url: "link",
->>>>>>> mustafo
+
   },
 ];
 
