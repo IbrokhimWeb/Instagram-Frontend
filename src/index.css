@@ -9,10 +9,10 @@
   --orange: #f77737;
   --yellow: #fcaf45;
   --light-yellow: #ffdc80;
-  
+
   --white: #fff;
   --light-gray: rgb(239, 239, 239);
-
+  --gray: rgb(219, 219, 219);
   --font-lg: 48px;
   --font-md: 18px;
 }
@@ -38,7 +38,7 @@
 /*  /Scrol  */
 
 @font-face {
-  font-family: "ubuntu-regular";
+  font-family: "ubuntu-regular"; 
   src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 @font-face {
@@ -51,7 +51,6 @@
   box-sizing: border-box;
   font-family: "ubuntu-regular";
 }
-
 
 @media screen and (max-width: 990px) {
   :root {
