@@ -10,7 +10,7 @@ import foto from '../assets/foto1.jpg'
 import video from '../assets/video5.mp4'
 import userAvatar from "../assets/userAvatar.png";
 import userPost from "../assets/carPhoto.jpg";
-// import userPost2 from "../assets/carPhoto2.jpg";
+import userPost2 from "../assets/carPhoto2.jpg";
 
 
 
@@ -80,12 +80,7 @@ export const userProfile = [
     ],
   },
 ];
-const xx = [userProfile[1].followers[0]];
-console.log(xx)
-xx.map((el) => {
-   console.log(el.username);
-});
-// console.log(data);
+
 export const heartedPosts = [
   { id: 0, img: heart2, author: 'userName', title1: 'title1', title2: 'title2' },
   { id: 1, img: heart1, author: 'userName', title1: 'title1', title2: 'title2' },
