@@ -14,9 +14,9 @@ import userPost from "../assets/carPhoto.jpg";
 
 
 
-export const posts = [
-  {}
-];
+// export const posts = [
+//   {}
+// ];
 
 
 export const posts = [{}];
@@ -36,7 +36,7 @@ export const userProfile = [
     savedPosts: [],
   },
   {
-    followers =[
+    followers :[
       {
         username: "qwrty555",
         avatar: userAvatar,
