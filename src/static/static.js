@@ -33,7 +33,7 @@ export const userProfile = [
   {
     followers: [
       {
-        username: "qwrty555",
+        username: "m_yakuboff",
         avatar: following,
         bio: "never give up",
       },  
@@ -43,7 +43,7 @@ export const userProfile = [
         bio: "keep doing it and don`t give up",
       },
       {
-        username: "klyuldasheva",
+        username: "m_yakuboff",
         avatar: following,
         bio: "in this morning ...",
       },
@@ -105,7 +105,7 @@ export const userProfile = [
     ],
   },
 ];
-// console.log(userProfile[1].followers.avatar);
+
 export const heartedPosts = [
   { img: "link", title: "nomi" },
   { img: "link", title: "nomi" },

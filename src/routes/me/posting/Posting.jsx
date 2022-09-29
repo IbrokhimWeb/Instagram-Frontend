@@ -144,7 +144,7 @@ function Posting({ userPosts }) {
           {userPosts.map((post, id) => {
             return (
               <div key={id} className={s.partImgsOfPosts}>
-                <img className={s.postImg} src={post.img} alt="" />
+                <img className={s.postImg} src={post.img} alt={s.title} />
               </div>
             );
           })}
