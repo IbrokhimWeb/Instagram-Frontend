@@ -36,11 +36,21 @@ export const userProfile = [
         username: "m_yakuboff",
         avatar: following,
         bio: "never give up",
-      },  
+      },
       {
         username: "m_yakuboff",
         avatar: following,
         bio: "keep doing it and don`t give up",
+      },
+      {
+        username: "m_yakuboff",
+        avatar: following,
+        bio: "in this morning ...",
+      },
+      {
+        username: "m_yakuboff",
+        avatar: following,
+        bio: "in this morning ...",
       },
       {
         username: "m_yakuboff",
@@ -58,6 +68,16 @@ export const userProfile = [
         username: "m_yakuboff",
         avatar: userAvatar,
         bio: "keep doing it and don`t give up",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
       },
       {
         username: "klyuldasheva",

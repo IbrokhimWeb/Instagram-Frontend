@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState } from "react";
+import { RiCloseFill } from "react-icons/ri";
 import s from "./UserFollowers.module.css";
-import { IoCloseSharp } from "react-icons/io";
 const UserFollowers = ({ userFollowers }) => {
   // CUSTOMIZATION DATA (FOLLOWERS,FOLLOWING,POSTS)
   const subscribers = [userFollowers[1]];
@@ -22,67 +22,6 @@ const UserFollowers = ({ userFollowers }) => {
     document.body.style.overflow = "unset";
   };
 
-  const drawer = () => {
-    if (modalId === "1") {
-      return followers.map((data, id) => {
-        return (
-          <div key={id}>
-            <div className={s.modalDiv}>
-              <h6>followers</h6>
-              <IoCloseSharp />
-              <div className={s.followList}>
-                <div className={s.list}>
-                  <img
-                    className={s.lisImg}
-                    src={data.avatar}
-                    alt={data.username}
-                    width={50}
-                    height={50}
-                  />
-                  <div className={s.texts}>
-                    <p> {data.username}</p>
-                    <span> {data.bio}</span>
-                  </div>
-                  <button> remove</button>
-                </div>
-              </div>
-            </div>
-            <div onClick={closeModal} className={s.overlay}></div>
-          </div>
-        );
-      });
-    } else if (modalId === "2") {
-      return following.map((data, id) => {
-        return (
-          <div key={id}>
-            <div className={s.modalDiv}>
-              <h6>followers</h6>
-              <div className={s.followList}>
-                <div className={s.list}>
-                  <img
-                    className={s.lisImg}
-                    src={data.avatar}
-                    alt={data.username}
-                    width={50}
-                    height={50}
-                  />
-                  <div className={s.texts}>
-                    <p> {data.username}</p>
-                    <span> {data.bio}</span>
-                  </div>
-                  <button> remove</button>
-                </div>
-              </div>
-            </div>
-            <div onClick={closeModal} className={s.overlay}></div>
-          </div>
-        );
-      });
-    } else {
-      <h1>error</h1>;
-    }
-  };
-  drawer();
   return (
     <>
       <div className={s.userFollowers}>
@@ -113,63 +52,65 @@ const UserFollowers = ({ userFollowers }) => {
             </div>
           );
         })}
-        {isModalVisible &&
-          modalId === "1" &&
-          followers.map((data, id) => {
-            return (
-              <div key={id}>
-                <div className={s.modalDiv}>
+
+        {isModalVisible && (
+          <>
+            <div className={s.modalDiv}>
+              <div className={s.listHeader}>
+                {modalId === "1" ? (
                   <h6 className={s.listTitle}>Followers</h6>
-                  <span> c&:'x</span>
-                  <div className={s.followList}>
-                    <div className={s.list}>
-                      <img
-                        className={s.listImg}
-                        src={data.avatar}
-                        alt={data.username}
-                        width={50}
-                        height={50}
-                      />
-                      <div className={s.texts}>
-                        <p> {data.username}</p>
-                        <span> {data.bio}</span>
-                      </div>
-                      <button className={s.removeBtn}> Remove</button>
-                    </div>
-                  </div>
-                </div>
-                <div onClick={closeModal} className={s.overlay}></div>
-              </div>
-            );
-          })}
-        {isModalVisible &&
-          modalId === "2" &&
-          following.map((data, id) => {
-            return (
-              <div key={id}>
-                <div className={s.modalDiv}>
+                ) : (
                   <h6 className={s.listTitle}>Following</h6>
-                  <div className={s.followList}>
-                    <div className={s.list}>
-                      <img
-                        className={s.listImg}
-                        src={data.avatar}
-                        alt="name"
-                        width={50}
-                        height={50}
-                      />
-                      <div className={s.texts}>
-                        <p className={s.listName}> {data.username}</p>
-                        <span className={s.bio}> {data.bio}</span>
-                      </div>
-                      <button className={s.removeBtn}> Remove</button>
-                    </div>
-                  </div>
-                </div>
-                <div onClick={closeModal} className={s.overlay}></div>
+                )}
+                <RiCloseFill className={s.closeBtn} onClick={closeModal} />
               </div>
-            );
-          })}
+              <div className={s.scroll}>
+                {modalId === "1"
+                  ? followers.map((data, id) => {
+                      return (
+                        <>
+                          <div key={id} className={s.followList}>
+                            <img
+                              className={s.listImg}
+                              src={data.avatar}
+                              alt={data.username}
+                            />
+                            <div className={s.list}>
+                              <div className={s.texts}>
+                                <p> {data.username}</p>
+                                <span> {data.bio}</span>
+                              </div>
+                            </div>
+                            <button className={s.removeBtn}> Remove</button>
+                          </div>
+                        </>
+                      );
+                    })
+                  : following.map((data, id) => {
+                      return (
+                        <>
+                          <div key={id} className={s.followList}>
+                            <img
+                              className={s.listImg}
+                              src={data.avatar}
+                              alt={data.username}
+                            />
+                            <div className={s.list}>
+                              <div className={s.texts}>
+                                <p> {data.username}</p>
+                                <span> {data.bio}</span>
+                              </div>
+                            </div>
+                            <button className={s.removeBtn}> Remove</button>
+                          </div>
+                        </>
+                      );
+                    })}
+              </div>
+            </div>
+            <div onClick={closeModal} className={s.overlay}></div>
+          </>
+        )}
       </div>
     </>
   );
