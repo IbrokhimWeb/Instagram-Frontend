@@ -1,18 +1,19 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 // @ts-nocheck
 import { React, useState } from "react";
-import s from "./Me.module.css";
 import { Link } from "react-router-dom";
 import { userProfile } from "../../static/static";
+
 import UserFollowers from "./userFollowers/UserFollowers";
 import Posting from "./posting/Posting";
+import s from "./Me.module.css";
 const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
   const userPosts = userProfile[1].posts;
   //MODAL FOR SHOWING PROFILE OPTIONS
   const [isOpen, setIsOpen] = useState(false);
-  const showModal = (e) => {
+  const showModal = () => {
     setIsOpen(true);
     document.body.style.overflow = "hidden";
   };
@@ -73,7 +74,45 @@ const Me = () => {
                         {isOpen && (
                           <>
                             <div className={s.modalDiv}>
-                              <h1>Opened</h1>
+                              <div className={s.optionBtns}>
+                                <p>Change password</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p> QR code</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Change password</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Apps and Websites</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Notifications</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Privacy and Security</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Supervisions</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Login Activity</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Emails from instagram</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Report a problems</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Log Out</p>
+                              </div>
+                              <div
+                                onClick={closeModal}
+                                className={s.optionBtns}
+                              >
+                                <p>Cancel</p>
+                              </div>
                             </div>
                             <div
                               onClick={closeModal}
@@ -135,7 +174,8 @@ const Me = () => {
                 </p>
                 <p className={s.newTxt}> New</p>
               </div>
-              {/* SECTION POSTING ADN ITEMS  */}
+              {/* SECTION POSTING AND ITEMS  */}
+
               <Posting userPosts={userPosts} />
             </div>
           );

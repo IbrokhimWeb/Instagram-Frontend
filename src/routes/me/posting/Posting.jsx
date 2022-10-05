@@ -1,8 +1,8 @@
 import s from "./Posting.module.css";
-
 function Posting({ userPosts }) {
   return (
     <>
+   
       <div className={s.posting}>
         <div className={s.postingBtns}>
           <p>
