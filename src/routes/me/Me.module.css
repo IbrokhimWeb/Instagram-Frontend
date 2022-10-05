@@ -40,9 +40,10 @@
 .optionBtn {
   display: block;
   width: 89px;
-  padding: 0 7px;
+  padding: 4px 8px;
   height: 30px;
   border-radius: 3px;
+  color: #000;
   background-color: var(--white);
   border: 1px solid var(--gray);
   font-size: 14px;
@@ -50,7 +51,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
 }
-
+.editBtn {
+  cursor: pointer;
+}
 .profileName {
   font-size: 16px;
   font-weight: 600;
@@ -105,4 +108,26 @@
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+}
+.modalDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background-color: var(--white);
+  z-index: 99;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }

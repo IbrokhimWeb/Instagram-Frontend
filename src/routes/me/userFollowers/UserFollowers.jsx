@@ -11,7 +11,6 @@ const UserFollowers = ({ userFollowers }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalId, setModalId] = useState("");
 
-  console.log(modalId);
   const showModal = (e) => {
     setIsModalVisible(true);
     document.body.style.overflow = "hidden";
@@ -52,7 +51,7 @@ const UserFollowers = ({ userFollowers }) => {
             </div>
           );
         })}
-
+       
         {isModalVisible && (
           <>
             <div className={s.modalDiv}>

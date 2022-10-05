@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 // @ts-nocheck
-import { React } from "react";
+import { React, useState } from "react";
 import s from "./Me.module.css";
+import { Link } from "react-router-dom";
 import { userProfile } from "../../static/static";
 import UserFollowers from "./userFollowers/UserFollowers";
 import Posting from "./posting/Posting";
@@ -9,7 +10,16 @@ const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
   const userPosts = userProfile[1].posts;
-  // const userFollowers = userProfile[1];
+  //MODAL FOR SHOWING PROFILE OPTIONS
+  const [isOpen, setIsOpen] = useState(false);
+  const showModal = (e) => {
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "unset";
+  };
   return (
     <>
       <div className={s.container}>
@@ -27,12 +37,13 @@ const Me = () => {
                     <div className={s.userOptions}>
                       <div className={s.userOptionItems}>
                         <h5 className={s.userName}>{user.username}</h5>
-                        <button type="button" className={s.optionBtn}>
+                        <Link to={"/options"} className={s.optionBtn}>
                           Edit Profile
-                        </button>
+                        </Link>
                         <svg
+                          onClick={showModal}
                           aria-label="Options"
-                          className="_ab6-"
+                          className={s.editBtn}
                           color="#262626"
                           fill="#262626"
                           height="25"
@@ -59,6 +70,17 @@ const Me = () => {
                             strokeWidth="2"
                           ></path>
                         </svg>
+                        {isOpen && (
+                          <>
+                            <div className={s.modalDiv}>
+                              <h1>Opened</h1>
+                            </div>
+                            <div
+                              onClick={closeModal}
+                              className={s.overlay}
+                            ></div>
+                          </>
+                        )}
                       </div>
                       {/* COMPONENT THAT SHOWS USER`S FOLLOWERS FOLLOWING AND POSTS */}
                       <UserFollowers userFollowers={userProfile} />
