@@ -1,8 +1,8 @@
 import s from "./Posting.module.css";
-
 function Posting({ userPosts }) {
   return (
     <>
+   
       <div className={s.posting}>
         <div className={s.postingBtns}>
           <p>
@@ -144,7 +144,7 @@ function Posting({ userPosts }) {
           {userPosts.map((post, id) => {
             return (
               <div key={id} className={s.partImgsOfPosts}>
-                <img className={s.postImg} src={post.img} alt="" />
+                <img className={s.postImg} src={post.img} alt={s.title} />
               </div>
             );
           })}

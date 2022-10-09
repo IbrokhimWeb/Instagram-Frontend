@@ -33,6 +33,9 @@
   object-position: bottom;
   border-radius: 2px;
 }
+.partImgsOfPosts:hover {
+  opacity: 0.5;
+}
 .partImgsOfPosts {
   overflow: hidden;
 }

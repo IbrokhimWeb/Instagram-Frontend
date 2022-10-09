@@ -53,17 +53,27 @@ export const userProfile = [
 
     followers: [
       {
-        username: "qwrty555",
+        username: "m_yakuboff",
         avatar: following,
         bio: "never give up",
-      },  
+      },
       {
         username: "m_yakuboff",
         avatar: following,
         bio: "keep doing it and don`t give up",
       },
       {
-        username: "klyuldasheva",
+        username: "m_yakuboff",
+        avatar: following,
+        bio: "in this morning ...",
+      },
+      {
+        username: "m_yakuboff",
+        avatar: following,
+        bio: "in this morning ...",
+      },
+      {
+        username: "m_yakuboff",
         avatar: following,
         bio: "in this morning ...",
       },
@@ -78,6 +88,16 @@ export const userProfile = [
         username: "m_yakuboff",
         avatar: userAvatar,
         bio: "keep doing it and don`t give up",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
+      },
+      {
+        username: "klyuldasheva",
+        avatar: userAvatar,
+        bio: "in this morning ...",
       },
       {
         username: "klyuldasheva",
@@ -125,7 +145,6 @@ export const userProfile = [
     ],
   },
 ];
-// console.log(userProfile[1].followers.avatar);
 
 export const heartedPosts = [
   {

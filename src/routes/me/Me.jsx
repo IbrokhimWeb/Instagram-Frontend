@@ -1,15 +1,26 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 // @ts-nocheck
-import { React } from "react";
-import s from "./Me.module.css";
+import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import { userProfile } from "../../static/static";
+
 import UserFollowers from "./userFollowers/UserFollowers";
 import Posting from "./posting/Posting";
+import s from "./Me.module.css";
 const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
   const userPosts = userProfile[1].posts;
-  // const userFollowers = userProfile[1];
+  //MODAL FOR SHOWING PROFILE OPTIONS
+  const [isOpen, setIsOpen] = useState(false);
+  const showModal = () => {
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "unset";
+  };
   return (
     <>
       <div className={s.container}>
@@ -27,12 +38,13 @@ const Me = () => {
                     <div className={s.userOptions}>
                       <div className={s.userOptionItems}>
                         <h5 className={s.userName}>{user.username}</h5>
-                        <button type="button" className={s.optionBtn}>
+                        <Link to={"/options"} className={s.optionBtn}>
                           Edit Profile
-                        </button>
+                        </Link>
                         <svg
+                          onClick={showModal}
                           aria-label="Options"
-                          className="_ab6-"
+                          className={s.editBtn}
                           color="#262626"
                           fill="#262626"
                           height="25"
@@ -59,6 +71,55 @@ const Me = () => {
                             strokeWidth="2"
                           ></path>
                         </svg>
+                        {isOpen && (
+                          <>
+                            <div className={s.modalDiv}>
+                              <div className={s.optionBtns}>
+                                <p>Change password</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p> QR code</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Change password</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Apps and Websites</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Notifications</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Privacy and Security</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Supervisions</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Login Activity</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Emails from instagram</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Report a problems</p>
+                              </div>
+                              <div className={s.optionBtns}>
+                                <p>Log Out</p>
+                              </div>
+                              <div
+                                onClick={closeModal}
+                                className={s.optionBtns}
+                              >
+                                <p>Cancel</p>
+                              </div>
+                            </div>
+                            <div
+                              onClick={closeModal}
+                              className={s.overlay}
+                            ></div>
+                          </>
+                        )}
                       </div>
                       {/* COMPONENT THAT SHOWS USER`S FOLLOWERS FOLLOWING AND POSTS */}
                       <UserFollowers userFollowers={userProfile} />
@@ -113,7 +174,8 @@ const Me = () => {
                 </p>
                 <p className={s.newTxt}> New</p>
               </div>
-              {/* SECTION POSTING ADN ITEMS  */}
+              {/* SECTION POSTING AND ITEMS  */}
+
               <Posting userPosts={userPosts} />
             </div>
           );
