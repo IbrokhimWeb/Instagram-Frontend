@@ -1,5 +1,12 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import s from './LeftComponent.module.css';
+
+// import Shamsiddin Hokks
+import { useDispatch, useSelector } from 'react-redux';
+
+// import Shamsiddin functions
+import Resize from '../../../hooks/ShamsiddinHoks/Resize';
+import Sliders from '../../../hooks/ShamsiddinHoks/Sliders';
 
 // import Components
 import Contents from './Contents/Contents';
@@ -9,26 +16,55 @@ import LeftCompPosts from './LeftCompPosts/LeftCompPosts';
 import {HiChevronLeft} from 'react-icons/hi';
 import {HiChevronRight} from 'react-icons/hi';
 
+// ============================================================================================================
 export default function LeftComponent({posts}) {
+  // Responsive
+  let responsive = [
+    {breakpointer: {width: 298, item: 3}},
+    {breakpointer: {width: 376, item: 4}},
+    {breakpointer: {width: 464, item: 5}},
+    {breakpointer: {width: 540, item: 6}},
+  ]
+
+  // Import Resize function
+  const [container, target, boxWidth, items] = Resize(responsive);
+
+  let postsInner = posts.map((keys, index) => {
+    return <Contents key={index} 
+                              username={keys.creator.username} 
+                              avatar={keys.creator.avatar}
+                              boxWidth={boxWidth}
+                              />
+  });
+
+  // Import Slider function
+  const [BtnsSlider, count] = Sliders(items, postsInner);
+  console.log(count);
+
+  // import Redux
+  const dispatch = useDispatch();
+  const selectSliderCount = useSelector(sliderCount => sliderCount.ReducerForSlider);
 
   return (
-    <div className={s.LeftComponents}>
+    <div ref={target} className={s.LeftComponents}>
 
-      {/* Content  */}
-      <div className={s.LeftCopmContentSlide}>
+      {/* Content  */} 
+      <div ref={container} className={s.LeftCopmContentSlide}>
 
-        <button className={s.chevronLeft}> <HiChevronLeft /> </button>
+        <button 
+          onClick={() => {
+            BtnsSlider({type: 'prev'});
+            // dispatch({type: 'prev',})
+          }}
+          className={s.chevronLeft}> <HiChevronLeft /> </button>
 
-        <div className={s.LeftCompContentInner}>
-          {posts.map((keys, index) => {
-              return <Contents key={index} 
-                                        username={keys.creator.username} 
-                                        avatar={keys.creator.avatar}
-                                        />
-            })}
+        <div style={{transform: `translateX(${count * -boxWidth}px)`}} className={s.LeftCompContentInner}>
+          {postsInner}
         </div>
 
-        <button className={s.chevronRight}> <HiChevronRight /> </button>
+        <button
+          onClick={() => BtnsSlider({type: 'next'})}
+          className={s.chevronRight}> <HiChevronRight /> </button>
 
       </div>
       {/* /Contents  */}

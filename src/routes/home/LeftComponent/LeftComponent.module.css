@@ -4,8 +4,9 @@
 }
 
 .LeftCopmContentSlide {
+    width: 100%;
     height: 7.6rem;
-    padding: 1rem .4rem;
+    /* padding: 1rem .4rem; */
     border: solid 1px #b7b7b7;
     border-radius: .6rem;
     box-sizing: border-box;
@@ -22,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: .3s ease;
 }
 
 .LeftCopmContentSlide button {
@@ -53,10 +55,13 @@
 @media(max-width: 830px){
     .LeftComponents {
         width: 33rem;
+        margin: 0;
+        padding-left: .4rem;
+        padding-right: .4rem;
     }
 }
 
-@media(max-width: 500px){
+@media(max-width: 540px){
     .LeftComponents {
         width: 100%;
     }

@@ -31,13 +31,13 @@ export default function LeftCompPosts({firstName, lastName, name, avatar, type, 
         <div className={s.BoxPosts}>
 
           {/* Hover Content start */}
-          <PostPosts active={selector.contentActive} 
+          {/* <PostPosts active={selector.contentActive} 
                      pagesX={selector.pagesX - boxWidth}
                      avatar={avatar}
                      name={name}
                      firstName={firstName}
                      lastName={lastName}
-          />
+          /> */}
           {/* Hover Content end */}
 
           <div onMouseEnter={(elem) => dispatch({

@@ -18,11 +18,13 @@
 @media(max-width: 830px){
     .HomeSection {
         justify-content: center;
+        padding: .4rem;
     }
 }
 
-@media(max-width: 500px){
+@media(max-width: 540px){
     .HomeSection {
-        padding: 1rem 0;
+        width: 100%;
+        padding: 1rem .5rem;
     }
 }

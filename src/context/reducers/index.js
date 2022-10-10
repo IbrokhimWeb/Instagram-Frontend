@@ -5,9 +5,10 @@ import heart from "./addToHeart";
 
 // Shamsiddin Reducer functions
 import ReducerActive from '../../hooks/ShamsiddinHoks/ReducerActive';
+import ReducerForSlider from '../../hooks/ShamsiddinHoks/ReducerForSlider';
 
 const rootReducer = combineReducers({
-    auth, heart, save, ReducerActive
+    auth, heart, save, ReducerActive, ReducerForSlider
 })
 
 export default rootReducer;

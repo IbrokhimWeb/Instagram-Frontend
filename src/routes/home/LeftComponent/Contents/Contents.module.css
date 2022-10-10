@@ -1,3 +1,11 @@
+.resizeContentBox {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px #ccc; */
+}
+
 .LeftCompmContent {
     width: 3.8rem;
     height: 100%;
