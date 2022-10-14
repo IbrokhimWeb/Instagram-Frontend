@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: "ubuntu-regular"; 
+  font-family: "ubuntu-regular";
   src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 @font-face {
@@ -52,8 +52,21 @@ li {
 a {
   text-decoration: none;
 }
+.react-multi-carousel-item {
+  width: 146px !important;
+  height: 114px !important;
+  margin-left: 10px;
+}
+.react-multi-carousel-item:first-child {
+  /* margin-left: -30px; */
+}
 
-/* .container{
-  width: 70%;
-  margin:0 auto;
-} */
+@media screen and(max-width : 500px) {
+  .react-multi-carousel-item {
+    width: 86px !important;
+    height: 60px !important;
+    margin-left: unset;
+  }
+ 
+}
+

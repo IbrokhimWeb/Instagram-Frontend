@@ -1,12 +1,10 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-// @ts-nocheck
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { userProfile } from "../../static/static";
-
 import UserFollowers from "./userFollowers/UserFollowers";
 import Posting from "./posting/Posting";
 import s from "./Me.module.css";
+import HighLights from "./highLights/HighLights";
 const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
@@ -140,40 +138,9 @@ const Me = () => {
                   </div>
                 </div>
               </div>
-              {/* MAP FOR SHOW HIGHLIGHTS */}
-              {userHighLights.map((item, id) => {
-                // eslint-disable-next-line no-lone-blocks
-                return (
-                  <span className={s.highLIghtsStories} key={id}>
-                    <img
-                      className={s.highLightImg}
-                      src={item.img}
-                      alt={item.desc}
-                    />
-                    <p className={s.highLightDesc}> {item.desc} </p>
-                  </span>
-                );
-              })}
-              {/* Adding new highlight button */}
-              <div className={s.btnItem}>
-                <p className={s.addStoryBtn}>
-                  <span>
-                    <svg
-                      aria-label="Plus icon"
-                      className="_ab6-"
-                      color="#c7c7c7"
-                      fill="#c7c7c7"
-                      height="44"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      width="44"
-                    >
-                      <path d="M21 11.3h-8.2V3c0-.4-.3-.8-.8-.8s-.8.4-.8.8v8.2H3c-.4 0-.8.3-.8.8s.3.8.8.8h8.2V21c0 .4.3.8.8.8s.8-.3.8-.8v-8.2H21c.4 0 .8-.3.8-.8s-.4-.7-.8-.7z"></path>
-                    </svg>
-                  </span>
-                </p>
-                <p className={s.newTxt}> New</p>
-              </div>
+              {/* SECTION HIGHLIGHTS (STORIES ) */}
+              <HighLights userHighLights={userHighLights} />
+
               {/* SECTION POSTING AND ITEMS  */}
 
               <Posting userPosts={userPosts} />

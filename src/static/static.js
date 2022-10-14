@@ -22,8 +22,25 @@ export const userProfile = [
         img: userPost2,
         desc: "Amg ",
       },
+
       {
         img: userPost,
+        desc: "Cls ",
+      },
+      {
+        img: userPost,
+        desc: "Amg ",
+      },
+      {
+        img: userPost2,
+        desc: "Cls ",
+      },
+      {
+        img: userPost,
+        desc: "Amg ",
+      },
+      {
+        img: userPost2,
         desc: "Cls ",
       },
     ],
