@@ -3,15 +3,18 @@
   border-top-width: 100%;
   margin-top: 65px;
 }
+/*  ADDABLE CLASS WHEN SWITCHING TOGGLES */
+.borderTop {
+  border-top: 1px solid black;
+}
 .postingBtns {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   position: relative;
   vertical-align: baseline;
-  justify-items: space-between;
+  justify-items: space-between !important;
 }
-.postingBtns p {
+.toggleBar {
   display: flex;
   align-items: center !important;
   padding: 15px;
@@ -38,4 +41,7 @@
 }
 .partImgsOfPosts {
   overflow: hidden;
+}
+.posts {
+  transition: all 0.5s ease-out;
 }

@@ -1,11 +1,21 @@
+import React, { useState } from "react";
 import s from "./Posting.module.css";
-function Posting({ userPosts }) {
+function Posting({ userPosts, savedPosts }) {
+  console.log(savedPosts);
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
-   
       <div className={s.posting}>
         <div className={s.postingBtns}>
-          <p>
+          <p
+            onClick={() => setToggle(false)}
+            className={
+              toggle !== true
+                ? `${s.borderTop} ${s.toggleBar}`
+                : `${s.toggleBar}`
+            }
+          >
             <span>
               <svg
                 className="_ab6-"
@@ -75,7 +85,14 @@ function Posting({ userPosts }) {
             </span>
             POSTS
           </p>
-          <p>
+          <p
+            onClick={() => setToggle(true)}
+            className={
+              toggle === true
+                ? `${s.borderTop} ${s.toggleBar}`
+                : `${s.toggleBar}`
+            }
+          >
             <span>
               <svg
                 className="_ab6-"
@@ -98,7 +115,7 @@ function Posting({ userPosts }) {
             </span>
             SAVED
           </p>
-          <p>
+          <p className={s.toggleBar}>
             <span>
               <svg
                 className="_ab6-"
@@ -140,15 +157,27 @@ function Posting({ userPosts }) {
             TAGGED
           </p>
         </div>
-        <div className={s.posts}>
-          {userPosts.map((post, id) => {
-            return (
-              <div key={id} className={s.partImgsOfPosts}>
-                <img className={s.postImg} src={post.img} alt={s.title} />
-              </div>
-            );
-          })}
-        </div>
+        {!toggle ? (
+          <div className={s.posts}>
+            {userPosts.map((post, id) => {
+              return (
+                <div key={id} className={s.partImgsOfPosts}>
+                  <img className={s.postImg} src={post.img} alt={s.title} />
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className={s.posts}>
+            {savedPosts.map((post, id) => {
+              return (
+                <div key={id} className={s.partImgsOfPosts}>
+                  <img className={s.postImg} src={post.img} alt={s.title} />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
   );

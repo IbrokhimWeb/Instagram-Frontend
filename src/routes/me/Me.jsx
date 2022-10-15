@@ -9,6 +9,7 @@ const Me = () => {
   const userInfos = [userProfile[0]];
   const userHighLights = userProfile[0].highLights;
   const userPosts = userProfile[1].posts;
+  const savedPosts = userProfile[0].savedPosts;
   //MODAL FOR SHOWING PROFILE OPTIONS
   const [isOpen, setIsOpen] = useState(false);
   const showModal = () => {
@@ -143,7 +144,7 @@ const Me = () => {
 
               {/* SECTION POSTING AND ITEMS  */}
 
-              <Posting userPosts={userPosts} />
+              <Posting savedPosts={savedPosts} userPosts={userPosts} />
             </div>
           );
         })}

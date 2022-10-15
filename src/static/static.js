@@ -45,7 +45,16 @@ export const userProfile = [
       },
     ],
     postLikes: [],
-    savedPosts: [],
+    savedPosts: [
+      {
+        img: following,
+        desc: "something",
+      },
+      {
+        img: following,
+        desc: "something",
+      },
+    ],
   },
   {
     followers: [

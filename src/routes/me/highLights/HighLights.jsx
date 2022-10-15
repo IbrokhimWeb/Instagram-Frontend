@@ -3,8 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import s from "./HighLights.module.css";
 
 const HighLights = ({ userHighLights }) => {
-  console.log(userHighLights.length);
-  //CAROUSEL RESPONSIBLE OPTIONS !
+  //CAROUSEL RESPONSIVE OPTIONS !
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
