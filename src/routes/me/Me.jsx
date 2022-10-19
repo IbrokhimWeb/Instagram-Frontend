@@ -25,7 +25,7 @@ const Me = () => {
       <div className={s.container}>
         {userInfos.map((user, id) => {
           return (
-            <div key={id}>
+            <div className={s.meHeader} key={id}>
               <div className={s.userProfile}>
                 <img
                   className={s.userAvatar}
@@ -122,7 +122,7 @@ const Me = () => {
                       </div>
                       {/* COMPONENT THAT SHOWS USER`S FOLLOWERS FOLLOWING AND POSTS */}
                       <UserFollowers userFollowers={userProfile} />
-                      <div  className={s.userTexts} >
+                      <div className={s.userTexts}>
                         <span className={s.profileName}>
                           {user.firstName} {user.lastName}
                         </span>
@@ -143,9 +143,7 @@ const Me = () => {
               </div>
               {/* SECTION HIGHLIGHTS (STORIES ) */}
               <HighLights userHighLights={userHighLights} />
-
               {/* SECTION POSTING AND ITEMS  */}
-
               <Posting savedPosts={savedPosts} userPosts={userPosts} />
             </div>
           );

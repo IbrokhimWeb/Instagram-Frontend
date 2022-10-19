@@ -47,11 +47,14 @@
 }
 @media screen and (max-width: 500px) {
   .posts {
-    grid-template-columns: repeat(3, 136px);
-    grid-auto-rows: minmax(136px, 136px) !important;
+    grid-template-columns: repeat(3, 126px);
+    grid-auto-rows: minmax(116px, 116px) !important;
+    padding: 5px;
     gap: 5px !important;
+    width: 400px !important;
+    border: 1px solid black;
   }
-  .postingBtns {
+  /* .postingBtns {
     width: 45%;
-  }
+  } */
 }

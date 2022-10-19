@@ -101,9 +101,14 @@
   padding: 4px 8px;
 }
 @media screen and (max-width: 500px) {
+  .container {
+    width: auto !important;
+    margin: unset !important;
+  }
   .userProfile {
-    padding: 16px 16px 0 16px !important;
+    padding: 12px 12px 0 12px !important;
     position: relative;
+    display: unset;
   }
   .userAvatar {
     width: 87px;
@@ -112,15 +117,23 @@
   }
   .userOptionItems {
     grid-template-columns: 150px 10px;
-    width: 277px;
+    width: 100% !important;
+    margin: -86px 0 0 49%;
   }
   .optionBtn {
     grid-row: 2;
     width: 250px;
     text-align: center;
   }
-
+  .userLink {
+    font-size: 14px;
+  }
   .userTexts {
-    margin: 16px 0 0;
+    margin: 16px 19px 0;
+    width: 250px;
+  }
+
+  .userOptions {
+    width: 257px;
   }
 }

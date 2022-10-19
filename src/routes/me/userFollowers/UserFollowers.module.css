@@ -47,7 +47,7 @@
 }
 .listHeader {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   align-items: center;
 }
 .texts p {
@@ -111,5 +111,6 @@
     margin-bottom: unset;
     top: 170%;
     left: 45px;
+    width: 325px;
   }
 }
