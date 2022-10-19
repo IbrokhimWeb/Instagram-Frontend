@@ -64,8 +64,6 @@
   margin: 10px 0 10px 0;
 }
 
-
-
 .modalDiv {
   position: absolute;
   top: 50%;
@@ -101,4 +99,28 @@
   height: 48px;
   font-size: 14px;
   padding: 4px 8px;
+}
+@media screen and (max-width: 500px) {
+  .userProfile {
+    padding: 16px 16px 0 16px !important;
+    position: relative;
+  }
+  .userAvatar {
+    width: 87px;
+    height: 87px;
+    margin-right: 24px;
+  }
+  .userOptionItems {
+    grid-template-columns: 150px 10px;
+    width: 277px;
+  }
+  .optionBtn {
+    grid-row: 2;
+    width: 250px;
+    text-align: center;
+  }
+
+  .userTexts {
+    margin: 16px 0 0;
+  }
 }

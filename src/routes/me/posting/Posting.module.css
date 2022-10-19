@@ -45,3 +45,13 @@
 .posts {
   transition: all 0.5s ease-out;
 }
+@media screen and (max-width: 500px) {
+  .posts {
+    grid-template-columns: repeat(3, 136px);
+    grid-auto-rows: minmax(136px, 136px) !important;
+    gap: 5px !important;
+  }
+  .postingBtns {
+    width: 45%;
+  }
+}

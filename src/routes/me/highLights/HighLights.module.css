@@ -48,3 +48,20 @@
   font-size: 15px;
   text-align: center;
 }
+@media screen and (max-width: 500px) {
+  .highLightImg {
+    width: 66px;
+    height: 66px;
+  }
+  .btnItem {
+    width: 66px;
+    height: 66px;
+    margin-right: 0 !important;
+  }
+  .newTxt {
+    font-size: 12px;
+  }
+  .highLightDesc {
+    font-size: 12px;
+  }
+}

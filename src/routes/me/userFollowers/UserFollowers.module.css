@@ -105,3 +105,11 @@
   display: inline-block;
   width: 227px;
 }
+@media screen and (max-width: 500px) {
+  .userFollowers {
+    position: absolute;
+    margin-bottom: unset;
+    top: 170%;
+    left: 45px;
+  }
+}

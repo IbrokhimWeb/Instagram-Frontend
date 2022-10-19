@@ -122,19 +122,21 @@ const Me = () => {
                       </div>
                       {/* COMPONENT THAT SHOWS USER`S FOLLOWERS FOLLOWING AND POSTS */}
                       <UserFollowers userFollowers={userProfile} />
-                      <span className={s.profileName}>
-                        {user.firstName} {user.lastName}
-                      </span>
-                      <p className={s.userBio}>{user.bio}</p>
-                      <h4 className={s.userLink}>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://mustafo-yakubof.netlify.com"
-                        >
-                          {user.userLink}
-                        </a>
-                      </h4>
+                      <div  className={s.userTexts} >
+                        <span className={s.profileName}>
+                          {user.firstName} {user.lastName}
+                        </span>
+                        <p className={s.userBio}>{user.bio}</p>
+                        <h4 className={s.userLink}>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://mustafo-yakubof.netlify.com"
+                          >
+                            {user.userLink}
+                          </a>
+                        </h4>
+                      </div>
                     </div>
                   </div>
                 </div>

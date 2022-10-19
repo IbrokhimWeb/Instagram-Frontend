@@ -1,20 +1,25 @@
-.container{
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar{
-    height: 60px;
-    padding: 0 200px;
-    display: flex;
-    gap: 100px;
-    align-items: center;
-    border-bottom: 0.5px solid rgb(189, 189, 189);
+.navbar {
+  height: 60px;
+  padding: 0 200px;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(189, 189, 189);
 }
 
-.textLogo{
-    width: 110px;
-    padding-top: 10px;
-    margin-right: 100px;
+.textLogo {
+  width: 110px;
+  padding-top: 10px;
+  margin-right: 100px;
 }
 
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
+}

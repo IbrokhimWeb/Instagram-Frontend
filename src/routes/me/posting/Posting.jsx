@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import s from "./Posting.module.css";
 function Posting({ userPosts, savedPosts }) {
-  console.log(savedPosts);
   const [toggle, setToggle] = useState(false);
 
   return (
