@@ -47,7 +47,7 @@
 }
 .listHeader {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
 }
 .texts p {
@@ -107,10 +107,14 @@
 }
 @media screen and (max-width: 500px) {
   .userFollowers {
-    position: absolute;
+    /* position: absolute;
     margin-bottom: unset;
     top: 170%;
     left: 45px;
-    width: 325px;
+    width: 325px; */
+    width: 100%;
+  }
+  .userFollowersHeader {
+    width: 100%;
   }
 }

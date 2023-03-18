@@ -26,7 +26,7 @@ const UserFollowers = ({ userFollowers }) => {
       <div className={s.userFollowers}>
         {subscribers.map((data, id) => {
           return (
-            <div key={id}>
+            <div className={s.userFollowersHeader} key={id}>
               {/* MAP FOR POSTS */}
               <span className={s.userFollowersItem}>
                 <span>{data.posts.length}</span> posts
